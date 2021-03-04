@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image2"
+    tools:context=".ChatActivity">
+
+    <TextView
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="E-Class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_550sdp"
+        android:background="@drawable/bg_shape"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/notificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:text="You have 3 Notification"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:text="congratulations , you already invited now"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_24sdp"
+            android:id="@+id/layoutNotification"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_64sdp"
+            android:background="@drawable/bg_shape_menu"
+            android:outlineSpotShadowColor="@color/black"
+            android:padding="16dp" >
+
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp" />
+
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#000"
+                android:text="pesan baru"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#000"
+                android:text="anda mendapatkan pesan baru "
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/title"
+                />
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

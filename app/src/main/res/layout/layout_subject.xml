@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iconMatkul"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_account"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iconMatkul"
+        android:id="@+id/namaMatkul"
+        android:text="matkul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
