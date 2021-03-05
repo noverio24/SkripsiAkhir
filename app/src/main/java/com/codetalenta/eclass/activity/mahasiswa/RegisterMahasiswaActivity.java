@@ -1,4 +1,4 @@
-package com.codetalenta.eclass;
+package com.codetalenta.eclass.activity.mahasiswa;
 
 import androidx.appcompat.app.AppCompatActivity;
 

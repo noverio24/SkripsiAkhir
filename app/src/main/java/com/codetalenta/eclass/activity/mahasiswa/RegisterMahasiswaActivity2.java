@@ -1,7 +1,6 @@
-package com.codetalenta.eclass;
+package com.codetalenta.eclass.activity.mahasiswa;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -13,11 +12,11 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import com.codetalenta.eclass.HomePageActivity;
+import com.codetalenta.eclass.R;
 import com.codetalenta.eclass.helper.UrlApi;
 import com.codetalenta.eclass.service.AuthService;
 

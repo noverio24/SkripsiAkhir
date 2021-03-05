@@ -18,9 +18,9 @@
         <activity android:name=".HomePageActivity">
 
         </activity>
-        <activity android:name=".RegisterMahasiswaActivity2" />
-        <activity android:name=".RegisterMahasiswaActivity" />
-        <activity android:name=".LoginMahasiswaActivity" >
+        <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity2" />
+        <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity" />
+        <activity android:name=".activity.mahasiswa.LoginMahasiswaActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

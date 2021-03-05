@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/image2"
-    tools:context=".RegisterMahasiswaActivity">
+    tools:context=".activity.mahasiswa.RegisterMahasiswaActivity">
 
     <ImageView
         android:id="@+id/btnBack"

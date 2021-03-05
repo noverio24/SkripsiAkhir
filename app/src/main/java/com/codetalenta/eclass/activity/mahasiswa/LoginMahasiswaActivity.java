@@ -1,15 +1,15 @@
-package com.codetalenta.eclass;
+package com.codetalenta.eclass.activity.mahasiswa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.codetalenta.eclass.HomePageActivity;
 import com.codetalenta.eclass.R;
 import com.codetalenta.eclass.helper.Session;
 import com.codetalenta.eclass.helper.UrlApi;
@@ -24,7 +24,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Url;
 
 
 public class LoginMahasiswaActivity extends AppCompatActivity {
@@ -70,12 +69,12 @@ public class LoginMahasiswaActivity extends AppCompatActivity {
                     try {
                         String data = response.body().string();
                         JSONObject result = new JSONObject(data);
-                        System.out.println(result.getBoolean("succes"));
-                        if (result.getBoolean("succes")){
+                        System.out.println(result.getBoolean("success"));
+                        if (result.getBoolean("success")){
                             String token = result.getString("access_token");
-                            session.add("token", "Bearer" + token);
+                            session.add("token", "Bearer " + token);
                             session.add("login", true);
-                            session.add("succes", true);
+                            session.add("success", true);
                             startActivity(new Intent(LoginMahasiswaActivity.this, HomePageActivity.class));
                             finish();
                         }
