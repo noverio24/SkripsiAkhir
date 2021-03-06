@@ -1,5 +1,6 @@
 package com.codetalenta.eclass.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -10,8 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.codetalenta.eclass.HomePageActivity;
+import com.codetalenta.eclass.MainActivity;
 import com.codetalenta.eclass.R;
+import com.codetalenta.eclass.activity.mahasiswa.LoginMahasiswaActivity;
 import com.codetalenta.eclass.adapters.SubjectAdapter;
 import com.codetalenta.eclass.models.SubjectModel;
 
@@ -24,14 +29,20 @@ public class HomeFragment extends Fragment {
     public View view;
     private List<SubjectModel> subjectModels = new ArrayList<>();
     private SubjectAdapter subjectAdapter;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         view = inflater.inflate(R.layout.fragment_home, container, false);
         recycleSubject = view.findViewById(R.id.recycleSubject);
         getData();
+
         return view;
     }
+
 
     private void getData() {
         subjectModels.add(new SubjectModel("https://cdn2.iconfinder.com/data/icons/whcompare-isometric-web-hosting-servers/50/database-512.png", "Database"));

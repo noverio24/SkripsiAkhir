@@ -23,4 +23,11 @@ public interface AuthService {
     Call<ResponseBody> registerMahasiswa(
             @Part MultipartBody.Part photo,
             @PartMap Map<String, RequestBody> text);
+
+
+    @POST("dosen/register")
+    @Multipart
+    Call<ResponseBody> registerDosen(
+            @Part MultipartBody.Part photo,
+            @PartMap Map<String, RequestBody> text);
 }

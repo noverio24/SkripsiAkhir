@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codetalenta.eclass">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,22 +13,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EClass">
-        <activity android:name=".DetailRaport"></activity>
+        <activity android:name=".activity.dosen.RegisterDosenActivity2"></activity>
+        <activity android:name=".activity.dosen.RegisterDosenActivity" />
+        <activity android:name=".activity.dosen.LoginDosenActivity" />
+        <activity android:name=".DetailRaport" />
         <activity android:name=".SuccessActivity" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".HomePageActivity">
-
-        </activity>
+        <activity android:name=".HomePageActivity" />
         <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity2" />
         <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity" />
-        <activity android:name=".activity.mahasiswa.LoginMahasiswaActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activity.mahasiswa.LoginMahasiswaActivity" />
+        <activity android:name=".activity.dosen.LoginDosenActivity" />
     </application>
 
 </manifest>

@@ -78,10 +78,13 @@
                 android:src="@drawable/notification" />
 
             <ImageView
-                android:layout_width="30dp"
+                android:layout_width="22dp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:src="@drawable/settings" />
+
+
+
         </LinearLayout>
     </RelativeLayout>
 

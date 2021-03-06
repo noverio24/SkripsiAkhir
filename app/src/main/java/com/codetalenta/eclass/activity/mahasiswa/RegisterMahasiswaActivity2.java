@@ -86,7 +86,7 @@ public class RegisterMahasiswaActivity2 extends AppCompatActivity {
         map.put("nid", createPartFromString(acID));
         map.put("address", createPartFromString(address));
         map.put("phone", createPartFromString(phone));
-        map.put("bio", createPartFromString(""));
+        map.put("bio", createPartFromString("abcd"));
 
         RequestBody reqFile = RequestBody.create(MediaType.parse("image/*"), file);
         MultipartBody.Part body = MultipartBody.Part.createFormData("photo", file.getName(), reqFile);
