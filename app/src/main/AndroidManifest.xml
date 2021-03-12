@@ -20,9 +20,10 @@
         <activity android:name=".SuccessActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".HomePageActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity2" />
         <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomePageActivityDosen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.mahasiswa.LoginMahasiswaActivity" />
-        <activity android:name=".activity.dosen.LoginDosenActivity" />
+
     </application>
 
 </manifest>

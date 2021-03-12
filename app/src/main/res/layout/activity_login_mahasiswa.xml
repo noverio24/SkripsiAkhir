@@ -22,7 +22,7 @@
         android:layout_marginLeft="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_150sdp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Welcome \n Back"
+        android:text="Selamat datang \n Murid"
         android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold" />
