@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-import com.codetalenta.eclass.HomePageActivity;
-import com.codetalenta.eclass.HomePageActivityDosen;
 import com.codetalenta.eclass.R;
 import com.codetalenta.eclass.helper.Session;
 import com.codetalenta.eclass.helper.UrlApi;
@@ -33,6 +31,7 @@ public class LoginDosenActivity extends AppCompatActivity {
     private Button btnLogin, btnRegister;
     private AuthService authService = UrlApi.getAuthService();
     private Session session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +52,9 @@ public class LoginDosenActivity extends AppCompatActivity {
         loginSession();
     }
 
-    private void loginSession(){
-        if (session.getBoolean("succes")){
-            startActivity(new Intent(LoginDosenActivity.this, HomePageActivity.class));
+    private void loginSession() {
+        if (session.getBoolean("succes")) {
+            startActivity(new Intent(LoginDosenActivity.this, HomePageActivityDosen.class));
             finish();
         }
     }
@@ -67,16 +66,53 @@ public class LoginDosenActivity extends AppCompatActivity {
         authService.login(email, password).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if (response.isSuccessful()){
+                if (response.isSuccessful()) {
                     try {
                         String data = response.body().string();
                         JSONObject result = new JSONObject(data);
                         System.out.println(result.getBoolean("success"));
-                        if (result.getBoolean("success")){
+                        if (result.getBoolean("success")) {
                             String token = result.getString("access_token");
                             session.add("token", "Bearer " + token);
                             session.add("login", true);
                             session.add("success", true);
+                            checkData();
+                        }
+                    } catch (IOException | JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    Toast.makeText(LoginDosenActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                System.out.println(t);
+                Toast.makeText(LoginDosenActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+    void checkData() {
+        authService.checkData(session.getString("token")).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()) {
+                    try {
+                        String data = response.body().string();
+                        JSONObject result = new JSONObject(data);
+                        System.out.println(result.getBoolean("success"));
+                        if (result.getBoolean("success")) {
+                            JSONObject dataDosen = result.getJSONObject("data").getJSONObject("data");
+                            JSONObject dataUser = result.getJSONObject("data").getJSONObject("user");
+                            session.add("name", dataDosen.getString("name"));
+                            session.add("photo", dataDosen.getString("url_photo"));
+                            session.add("dosen_id", dataDosen.getString("id"));
+                            session.add("user_id", dataDosen.getString("id"));
+
                             startActivity(new Intent(LoginDosenActivity.this, HomePageActivityDosen.class));
                             finish();
                         }
@@ -84,13 +120,15 @@ public class LoginDosenActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                }else {
+                } else {
                     Toast.makeText(LoginDosenActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 System.out.println(t);
+                Toast.makeText(LoginDosenActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
             }
         });
     }

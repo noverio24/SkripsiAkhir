@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.dosen.fragment.WeekNotedFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formSubject_CV"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Tambah Catatan minggu"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="list catatan"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:background="@drawable/bg_shape_notification"
+                android:id="@+id/namaSubject"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                android:hint=" catatan minggu 1" />
+
+            <EditText
+                android:background="@drawable/bg_shape_notification"
+                android:padding="10dp"
+                android:id="@+id/codeSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+
+                android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                android:hint=" catatan minggu 2" />
+
+
+
+            <EditText
+                android:background="@drawable/bg_shape_notification"
+                android:padding="10dp"
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                android:hint=" catatan minggu 3 " />
+
+            <EditText
+                android:background="@drawable/bg_shape_notification"
+                android:padding="10dp"
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                android:hint=" catatan minggu 4" />
+
+            <Button
+                android:id="@+id/btnTambah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="@color/purple_200"
+                android:fontFamily="@font/poppins_bold"
+                android:text="tambah catatan" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

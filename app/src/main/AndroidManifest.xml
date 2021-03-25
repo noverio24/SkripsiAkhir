@@ -23,7 +23,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity2" />
         <activity android:name=".activity.mahasiswa.RegisterMahasiswaActivity" />
-        <activity android:name=".HomePageActivityDosen">
+        <activity android:name=".activity.dosen.HomePageActivityDosen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
